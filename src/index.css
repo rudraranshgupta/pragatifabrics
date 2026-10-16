@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --color-brand-orange: #F5A623;
+  --color-brand-orange-deep: #E07B1A;
+  --color-brand-orange-light: #FFCF73;
+  --color-charcoal: #2C3140;
+  --color-off-white: #F8F6F2;
+  --color-warm-light: #EDE8DF;
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-body bg-off-white text-charcoal antialiased overflow-x-hidden;
+  }
+}
+
+.frosted-nav {
+  @apply backdrop-blur-md bg-white/70 border-b border-charcoal/5 sticky top-0 z-50 transition-all duration-300;
+}
+
+.scrolled-nav {
+  @apply bg-white/95 shadow-sm;
+}
+
+.marquee-container {
+  @apply bg-charcoal overflow-hidden py-4 whitespace-nowrap;
+}
+
+.marquee-content {
+  @apply inline-block animate-marquee;
+}
+
+.bento-card {
+  @apply bg-white p-6 rounded-none border border-charcoal/5 shadow-sm transition-all duration-300;
+}
+
+.fabric-card {
+  @apply bg-white p-6 rounded-none border border-charcoal/5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2;
+}
+
+.btn-primary {
+  @apply bg-brand-orange hover:bg-brand-orange-deep text-white px-8 py-3 font-medium transition-all duration-200 inline-block text-center;
+}
+
+.section-padding {
+  @apply py-20 px-6 lg:py-32 lg:px-20;
+}
+
+.display-title {
+  @apply font-display italic text-4xl lg:text-6xl text-charcoal leading-tight;
+}
+
+.small-caps {
+  @apply text-xs uppercase tracking-widest font-medium opacity-70;
+}

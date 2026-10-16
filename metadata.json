@@ -1,0 +1,8 @@
+{
+  "name": "Pragati Fabrics — Exclusive Designer Fabrics",
+  "description": "Pragati Fabrics is a 20+ year old manufacturer of knitting fabrics, polyester blends, and nylon viscose. Premium textile supplier based in Mumbai with manufacturing in Surat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
